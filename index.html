@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Mario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hud" role="status" aria-label="Painel do jogo">
+
+        <div class="hud__block">
+            <span class="hud__label">VIDAS</span>
+            <div class="hud__lives" id="livesDisplay" aria-label="Vidas restantes">
+                <span class="heart" aria-hidden="true">❤️</span>
+                <span class="heart" aria-hidden="true">❤️</span>
+                <span class="heart" aria-hidden="true">❤️</span>
+            </div>
+        </div>
+
+        <h1 class="hud__title">SUPER MARIO</h1>
+
+        <div class="hud__block hud__block--right">
+            <span class="hud__label">MOEDAS</span>
+            <div class="hud__coins">
+                <span aria-hidden="true">🪙</span>
+                <span id="coinCount" aria-live="polite">0</span>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="game-board" id="gameBoard" role="application" aria-label="Arena do jogo">
+
+        <img src="img/clouds.png" class="clouds clouds--far"  alt="">
+        <img src="img/clouds.png" class="clouds clouds--near" alt="">
+
+        <img src="img/mario.gif" class="mario" id="mario" alt="Mario">
+        <img src="img/pipe.png"  class="pipe"  id="pipe"  alt="Cano obstáculo">
+
+        <div class="start-screen" id="startScreen" role="dialog" aria-modal="true" aria-label="Clique para iniciar" hidden>
+            <div class="start-screen__content">
+                <img src="img/start-game.png" class="start-screen__image" alt="Super Mario Bros. - Clique para Iniciar">
+                <span class="start-screen__text">CLIQUE PARA COMEÇAR</span>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="game-over" id="gameOver" role="dialog" aria-modal="true" aria-label="Fim de jogo" hidden>
+        <div class="game-over__box">
+
+            <span class="game-over__icon" aria-hidden="true">💀</span>
+            <h2 class="game-over__title">GAME OVER</h2>
+
+            <dl class="game-over__stats">
+                <div class="game-over__stat">
+                    <dt>Moedas coletadas</dt>
+                    <dd id="finalCoins">0</dd>
+                </div>
+            </dl>
+
+            <button class="btn-restart" id="restartBtn">▶ JOGAR NOVAMENTE</button>
+
+        </div>
+    </div>
+
+    <div class="coin-popup" id="coinPopup" aria-live="assertive" aria-hidden="true">
+        <span id="coinPopupText">+1 🪙</span>
+    </div>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="sundtheme.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
