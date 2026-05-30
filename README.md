@@ -20,7 +20,7 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="img/printGame.png" alt="Screenshot do jogo em funcionamento" width="700">
+ <img width="580" height="243" alt="Captura de tela 2026-05-30 204545" src="https://github.com/user-attachments/assets/f6a34e28-7b38-4e30-9c35-9c02c50d425e" />
 </p>
 
 ---
